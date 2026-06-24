@@ -21,7 +21,7 @@ export function NeuralNetworkBg() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const nodesRef = useRef<Node[]>([]);
   const mouseRef = useRef<MousePos>({x: -1000, y: -1000});
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -278,8 +278,7 @@ export function NeuralNetworkBg() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-full h-full opacity-80 dark:opacity-60"
-      style={{mixBlendMode: 'dark:mix-blend-screen'}}
+      className="fixed inset-0 w-full h-full opacity-80 dark:opacity-60 mix-blend-screen dark:mix-blend-screen"
     />
   );
 }
