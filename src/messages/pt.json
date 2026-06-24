@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "name": "Marcus Rodrigues",
+    "title": "Desenvolvedor Full Stack",
+    "description": "Criando experiências web modernas com tecnologias de ponta. Especialista em React, Next.js e Node.js, transformando ideias em aplicações escaláveis.",
+    "cta": "Ver Projetos",
+    "contact": "Entre em Contato"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Sou um desenvolvedor Full Stack apaixonado por criar soluções web inovadoras. Com experiência em desenvolvimento de aplicações modernas, foco em escrever código limpo, escalável e manter-me sempre atualizado com as últimas tecnologias.",
+    "years": "Anos de Experiência",
+    "projects": "Projetos Entregues",
+    "technologies": "Tecnologias Dominadas"
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Banco de Dados",
+    "tools": "Ferramentas & DevOps",
+    "soft": "Habilidades Comportamentais"
+  },
+  "experience": {
+    "title": "Experiência Profissional",
+    "current": "Atual",
+    "present": "Presente"
+  },
+  "projects": {
+    "title": "Projetos Destacados",
+    "view": "Ver Projeto",
+    "github": "Ver no GitHub",
+    "demo": "Demo ao Vivo",
+    "techStack": "Stack Tecnológica"
+  },
+  "contact": {
+    "title": "Vamos Conversar?",
+    "description": "Estou sempre aberto a novas oportunidades e colaborações. Entre em contato!",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "message": "Mensagem",
+      "submit": "Enviar Mensagem",
+      "sending": "Enviando...",
+      "success": "Mensagem enviada com sucesso!",
+      "error": "Erro ao enviar mensagem. Tente novamente."
+    },
+    "info": {
+      "email": "E-mail",
+      "location": "Localização",
+      "availability": "Disponibilidade"
+    }
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados.",
+    "madeWith": "Feito com",
+    "sourceCode": "Código Fonte"
+  },
+  "common": {
+    "loading": "Carregando...",
+    "learnMore": "Saiba Mais",
+    "backToTop": "Voltar ao Topo"
+  }
+}

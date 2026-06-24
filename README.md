@@ -1,36 +1,162 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Marcus Rodrigues - Full Stack Developer Portfolio
 
-## Getting Started
+Portfolio profissional desenvolvido com Next.js 15, TypeScript, Tailwind CSS e shadcn/ui, com suporte a internacionalização (Português/Inglês).
 
-First, run the development server:
+## 🚀 Tecnologias
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 15** - Framework React com App Router
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Estilização utility-first
+- **shadcn/ui** - Componentes UI pré-estilizados
+- **next-intl** - Internacionalização
+- **Framer Motion** - Animações
+- **lucide-react** - Ícones
+
+## 📦 Estrutura do Projeto
+
+```
+portfolio/
+├── src/
+│   ├── app/
+│   │   ├── [locale]/       # Rotas com internacionalização
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── globals.css
+│   │   └── layout.tsx
+│   ├── components/
+│   │   ├── sections/       # Seções do portfolio
+│   │   │   ├── Hero.tsx
+│   │   │   ├── About.tsx
+│   │   │   ├── Experience.tsx
+│   │   │   ├── Projects.tsx
+│   │   │   └── Contact.tsx
+│   │   ├── ui/            # Componentes shadcn/ui
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   ├── ThemeToggle.tsx
+│   │   └── LanguageToggle.tsx
+│   ├── i18n/
+│   │   └── routing.ts
+│   ├── lib/
+│   │   ├── data.ts        # Dados do currículo
+│   │   └── utils.ts
+│   ├── messages/
+│   │   ├── pt.json        # Traduções PT-BR
+│   │   └── en.json        # Traduções EN
+│   ├── i18n.ts
+│   └── middleware.ts
+└── public/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Instalação
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Clone o repositório
+git clone <seu-repositorio>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Entre no diretório
+cd portfolio
 
-## Learn More
+# Instale as dependências
+npm install
 
-To learn more about Next.js, take a look at the following resources:
+# Inicie o servidor de desenvolvimento
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🌐 Scripts Disponíveis
 
-## Deploy on Vercel
+```bash
+npm run dev      # Inicia servidor de desenvolvimento
+npm run build    # Cria build de produção
+npm run start    # Inicia servidor de produção
+npm run lint     # Executa ESLint
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 Personalização
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Atualizar Dados do Currículo
+
+Edite o arquivo `src/lib/data.ts` para atualizar suas informações:
+
+```typescript
+export const personalInfo = {
+  name: 'Seu Nome',
+  title: 'Full Stack Developer',
+  email: 'seu@email.com',
+  location: 'Sua Localização',
+  // ...
+};
+```
+
+### Atualizar Traduções
+
+- **Português**: `src/messages/pt.json`
+- **Inglês**: `src/messages/en.json`
+
+### Personalizar Cores
+
+Edite o arquivo `src/app/globals.css` para ajustar as cores do tema dark tech.
+
+## 🚀 Deploy na Vercel
+
+### Método 1: Integração Git (Recomendado)
+
+1. **Push para GitHub**:
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push origin main
+   ```
+
+2. **Deploy na Vercel**:
+   - Acesse [vercel.com](https://vercel.com)
+   - Clique em "Add New Project"
+   - Importe seu repositório do GitHub
+   - A Vercel detectará automaticamente o Next.js
+   - Clique em "Deploy"
+
+### Método 2: Vercel CLI
+
+```bash
+# Instale a Vercel CLI
+npm i -g vercel
+
+# Faça login
+vercel login
+
+# Deploy
+vercel
+```
+
+### Variáveis de Ambiente
+
+Não há variáveis de ambiente obrigatórias para este projeto.
+
+### Domínio Personalizado
+
+1. No dashboard da Vercel, acesse "Settings" > "Domains"
+2. Adicione seu domínio
+3. Configure os DNS conforme instruções
+
+## 🎨 Recursos
+
+- ✅ **Design Dark Tech** - Tema escuro com acentos em roxo/neon
+- ✅ **Internacionalização** - Suporte PT/EN com toggle
+- ✅ **Responsivo** - Mobile-first, funciona em todos os dispositivos
+- ✅ **Animações** - Framer Motion para interações suaves
+- ✅ **SEO Otimizado** - Meta tags e sitemap
+- ✅ **Acessível** - ARIA labels e navegação por teclado
+- ✅ **Performance** - Build otimizado para Vercel
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
+
+## 👤 Autor
+
+**Marcus Rodrigues**
+- GitHub: [@marcusviniciusr](https://github.com/marcusviniciusr)
+- LinkedIn: [marcusviniciusr](https://linkedin.com/in/marcusviniciusr)
