@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Personal files
+*.pdf
+*.docx
+
+# Temporary directories
+portfolio-temp/
+
+# Claude memories
+.claude/
