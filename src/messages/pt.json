@@ -4,70 +4,48 @@
     "about": "Sobre",
     "skills": "Habilidades",
     "experience": "Experiência",
-    "projects": "Projetos",
     "contact": "Contato"
   },
   "hero": {
     "greeting": "Olá, eu sou",
     "name": "Marcus Rodrigues",
-    "title": "Desenvolvedor Full Stack",
-    "description": "Criando experiências web modernas com tecnologias de ponta. Especialista em React, Next.js e Node.js, transformando ideias em aplicações escaláveis.",
-    "cta": "Ver Projetos",
-    "contact": "Entre em Contato"
+    "title": "Engenheiro de Software Full Stack",
+    "description": "+5 anos desenvolvendo plataformas de grande escala e sistemas distribuídos. Especialista em C#/.NET, PHP/Laravel e Vue.js, com foco em arquitetura limpa, APIs REST e microserviços.",
+    "cta": "Minha Experiência",
+    "contact": "Fale Comigo"
   },
   "about": {
     "title": "Sobre Mim",
-    "description": "Sou um desenvolvedor Full Stack apaixonado por criar soluções web inovadoras. Com experiência em desenvolvimento de aplicações modernas, foco em escrever código limpo, escalável e manter-me sempre atualizado com as últimas tecnologias.",
+    "description": "Desenvolvedor Full Stack com mais de 5 anos de experiência na criação e manutenção de plataformas de grande escala e sistemas distribuídos. Atuo desde a concepção do produto até a implementação completa, sempre com foco em boas práticas e escalabilidade.",
     "years": "Anos de Experiência",
     "projects": "Projetos Entregues",
-    "technologies": "Tecnologias Dominadas"
+    "technologies": "Tecnologias"
   },
   "skills": {
     "title": "Habilidades Técnicas",
     "frontend": "Frontend",
     "backend": "Backend",
     "database": "Banco de Dados",
-    "tools": "Ferramentas & DevOps",
-    "soft": "Habilidades Comportamentais"
+    "tools": "Ferramentas & DevOps"
   },
   "experience": {
     "title": "Experiência Profissional",
     "current": "Atual",
     "present": "Presente"
   },
-  "projects": {
-    "title": "Projetos Destacados",
-    "view": "Ver Projeto",
-    "github": "Ver no GitHub",
-    "demo": "Demo ao Vivo",
-    "techStack": "Stack Tecnológica"
-  },
   "contact": {
     "title": "Vamos Conversar?",
     "description": "Estou sempre aberto a novas oportunidades e colaborações. Entre em contato!",
-    "form": {
-      "name": "Nome",
-      "email": "E-mail",
-      "message": "Mensagem",
-      "submit": "Enviar Mensagem",
-      "sending": "Enviando...",
-      "success": "Mensagem enviada com sucesso!",
-      "error": "Erro ao enviar mensagem. Tente novamente."
-    },
     "info": {
       "email": "E-mail",
-      "location": "Localização",
-      "availability": "Disponibilidade"
+      "location": "Localização"
     }
   },
   "footer": {
-    "rights": "Todos os direitos reservados.",
-    "madeWith": "Feito com",
-    "sourceCode": "Código Fonte"
+    "rights": "Todos os direitos reservados."
   },
   "common": {
     "loading": "Carregando...",
-    "learnMore": "Saiba Mais",
-    "backToTop": "Voltar ao Topo"
+    "learnMore": "Saiba Mais"
   }
 }

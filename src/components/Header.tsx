@@ -15,7 +15,6 @@ export function Header() {
     {href: '#about', label: t('about')},
     {href: '#skills', label: t('skills')},
     {href: '#experience', label: t('experience')},
-    {href: '#projects', label: t('projects')},
     {href: '#contact', label: t('contact')},
   ];
 

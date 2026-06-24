@@ -12,115 +12,117 @@ export const personalInfo = {
 export const skills = {
   frontend: [
     {name: 'Vue.js', level: 90},
-    {name: 'React', level: 85},
     {name: 'JavaScript', level: 90},
-    {name: 'TypeScript', level: 80},
     {name: 'HTML/CSS', level: 95},
-    {name: 'Tailwind CSS', level: 85},
+    {name: 'jQuery', level: 85},
   ],
   backend: [
-    {name: 'C# / .NET', level: 90},
-    {name: 'PHP / Laravel', level: 85},
+    {name: 'PHP', level: 95},
+    {name: 'Laravel', level: 90},
+    {name: 'C# / .NET', level: 85},
+    {name: 'Java', level: 80},
     {name: 'Node.js', level: 75},
     {name: 'Python', level: 80},
     {name: 'REST APIs', level: 90},
-    {name: 'Microserviços', level: 85},
   ],
   database: [
-    {name: 'SQL Server', level: 85},
-    {name: 'MySQL', level: 85},
-    {name: 'PostgreSQL', level: 80},
-    {name: 'MongoDB', level: 75},
+    {name: 'MySQL', level: 90},
+    {name: 'PostgreSQL', level: 85},
+    {name: 'PostGIS', level: 80},
+    {name: 'Firebase', level: 75},
+    {name: 'Redis', level: 80},
   ],
   tools: [
+    {name: 'Docker', level: 85},
+    {name: 'AWS', level: 85},
+    {name: 'CI/CD', level: 85},
     {name: 'Git', level: 90},
-    {name: 'Docker', level: 80},
-    {name: 'Azure', level: 75},
-    {name: 'AWS', level: 70},
-    {name: 'VS Code', level: 90},
-    {name: 'Postman', level: 85},
+    {name: 'AWS Lambda', level: 75},
   ],
   soft: [
     'Comunicação Efetiva',
     'Trabalho em Equipe',
     'Resolução de Problemas',
     'Aprendizado Contínuo',
-    'Adaptabilidade',
-    'Metodologias Ágeis',
     'Arquitetura Limpa',
     'Escalabilidade',
+    'Microserviços',
   ],
 };
 
 export const experience = [
   {
     id: 1,
-    company: 'Empresa Atual',
-    position: 'Desenvolvedor Full Stack',
-    period: '2021 - Presente',
-    description: 'Desenvolvimento de plataformas de grande escala e sistemas distribuídos. Atuação desde a concepção do produto até a implementação completa, com foco em arquitetura limpa, escalabilidade e integração entre serviços.',
-    technologies: ['C#', '.NET', 'Vue.js', 'SQL Server', 'Azure'],
+    company: 'Aleevia',
+    companySite: 'https://aleevia.com.br',
+    location: 'São José dos Campos, SP',
+    position: 'Engenheiro de Software',
+    period: '02/2025 - Atual',
+    description: 'Contribuindo com a idealização até o desenvolvimento de uma plataforma de gestão para clínicas, com sistema completo de agendamento, planos de saúde, faturamento e conciliação bancária. Atuação como desenvolvedor Backend utilizando Java e PHP com Laravel, definindo arquitetura do banco de dados e implementando PostGIS para cálculos de geolocalização.',
+    technologies: ['PHP', 'Laravel', 'Java', 'PostgreSQL', 'PostGIS', 'Docker'],
   },
   {
     id: 2,
-    company: 'Empresa Anterior',
-    position: 'Desenvolvedor Full Stack',
-    period: '2019 - 2021',
-    description: 'Criação e manutenção de aplicações web usando PHP com Laravel e JavaScript. Desenvolvimento de APIs REST, automações e integrações entre sistemas.',
-    technologies: ['PHP', 'Laravel', 'Vue.js', 'MySQL', 'Python'],
+    company: 'Inevent',
+    companySite: 'https://inevent.com',
+    location: 'Atlanta, Geórgia',
+    position: 'Desenvolvedor Full Stack Pleno',
+    period: '02/2022 - 03/2025',
+    description: 'Desenvolvimento e manutenção de plataformas de multi-eventos. Backend com PHP/Laravel criando APIs RESTful robustas e microsserviços. Frontend com Vue.js e jQuery em sistemas legados. Infraestrutura com Docker e serviços AWS, utilizando MySQL e Firebase para gerenciamento de dados.',
+    technologies: ['PHP', 'Laravel', 'Vue.js', 'MySQL', 'Firebase', 'AWS', 'Docker', 'Node.js'],
   },
   {
     id: 3,
-    company: 'Primeira Empresa',
-    position: 'Desenvolvedor Júnior',
-    period: '2018 - 2019',
-    description: 'Início da carreira desenvolvendo soluções web e integrações. Foco em aprendizado de tecnologias web e boas práticas de desenvolvimento.',
-    technologies: ['PHP', 'JavaScript', 'MySQL', 'Git'],
+    company: 'IESDE',
+    companySite: 'https://iesde.com.br',
+    location: 'Curitiba, PR',
+    position: 'Desenvolvedor Full Stack',
+    period: '06/2021 - 02/2022',
+    description: 'Desenvolvimento e manutenção de plataforma de E-learning para instituições de ensino superior. Criação de APIs robustas em PHP (CodeIgniter) suportando centenas de requisições por minuto. Gerenciamento de dados com MySQL e otimização com Redis para cache. Manutenção de sistema de pagamentos em Node.js com AWS Lambda.',
+    technologies: ['PHP', 'CodeIgniter', 'MySQL', 'Redis', 'Node.js', 'AWS Lambda', 'JavaScript', 'jQuery'],
   },
 ];
 
-export const projects = [
+export const education = [
   {
     id: 1,
-    title: 'Plataforma de Escala',
-    description: 'Sistema distribuído para gerenciamento de grandes volumes de dados com arquitetura de microserviços, comunicação assíncrona e alta disponibilidade.',
-    technologies: ['C#', '.NET', 'Azure', 'SQL Server', 'RabbitMQ'],
-    github: 'https://github.com/marcusviniciusr',
-    demo: null,
-    image: null,
+    institution: 'PUC-PR',
+    institutionSite: 'https://pucpr.br',
+    degree: 'Big Data: Ciência de Dados',
+    period: '06/2021 - 12/2023',
+    location: 'Curitiba, PR',
+    description: 'Machine Learning, Big Query, Clusters, Análise de dados',
   },
   {
     id: 2,
-    title: 'API de Integração',
-    description: 'API REST para integração entre múltiplos sistemas com autenticação, rate limiting e documentação automática.',
-    technologies: ['PHP', 'Laravel', 'MySQL', 'Swagger'],
-    github: 'https://github.com/marcusviniciusr',
-    demo: null,
-    image: null,
+    institution: 'SESI-PR',
+    institutionSite: 'https://sesi.pr',
+    degree: 'Técnico em Análise e Desenvolvimento de Sistemas',
+    period: '06/2019 - 12/2020',
+    location: 'Curitiba, PR',
+    description: 'Tecnologia',
   },
-  {
-    id: 3,
-    title: 'Dashboard Analytics',
-    description: 'Painel administrativo com visualização de dados em tempo real, gráficos interativos e exportação de relatórios.',
-    technologies: ['Vue.js', 'Chart.js', 'Laravel', 'PostgreSQL'],
-    github: 'https://github.com/marcusviniciusr',
-    demo: null,
-    image: null,
-  },
-  {
-    id: 4,
-    title: 'Sistema de Automação',
-    description: 'Automação de processos business using Python com integração de APIs externas e processamento de dados.',
-    technologies: ['Python', 'FastAPI', 'Celery', 'Redis'],
-    github: 'https://github.com/marcusviniciusr',
-    demo: null,
-    image: null,
-  },
+];
+
+export const languages = [
+  {name: 'Português', level: 'Língua materna'},
+  {name: 'Inglês', level: 'C1 - Avançado'},
 ];
 
 export const stats = [
   {value: '5+', label: 'Anos de Experiência'},
-  {value: '25+', label: 'Projetos Entregues'},
-  {value: '15+', label: 'Tecnologias'},
+  {value: '15+', label: 'Projetos Entregues'},
+  {value: '10+', label: 'Tecnologias'},
   {value: '100%', label: 'Dedicação'},
 ];
+
+// Empty export for compatibility (projects section hidden)
+export const projects: Array<{
+  id: number;
+  title: string;
+  description: string;
+  technologies: string[];
+  github: string;
+  demo: string | null;
+  image: string | null;
+}> = [];

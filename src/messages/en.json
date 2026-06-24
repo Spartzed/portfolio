@@ -4,70 +4,48 @@
     "about": "About",
     "skills": "Skills",
     "experience": "Experience",
-    "projects": "Projects",
     "contact": "Contact"
   },
   "hero": {
     "greeting": "Hi, I'm",
     "name": "Marcus Rodrigues",
-    "title": "Full Stack Developer",
-    "description": "Creating modern web experiences with cutting-edge technologies. Specialized in React, Next.js, and Node.js, transforming ideas into scalable applications.",
-    "cta": "View Projects",
+    "title": "Full Stack Software Engineer",
+    "description": "+5 years developing large-scale platforms and distributed systems. Specialized in C#/.NET, PHP/Laravel, and Vue.js, with focus on clean architecture, REST APIs, and microservices.",
+    "cta": "My Experience",
     "contact": "Get in Touch"
   },
   "about": {
     "title": "About Me",
-    "description": "I'm a Full Stack Developer passionate about creating innovative web solutions. With experience in developing modern applications, I focus on writing clean, scalable code and staying updated with the latest technologies.",
+    "description": "Full Stack Developer with 5+ years of experience creating and maintaining large-scale platforms and distributed systems. Working from product conception to full implementation, always focused on best practices and scalability.",
     "years": "Years of Experience",
     "projects": "Projects Delivered",
-    "technologies": "Technologies Mastered"
+    "technologies": "Technologies"
   },
   "skills": {
     "title": "Technical Skills",
     "frontend": "Frontend",
     "backend": "Backend",
     "database": "Databases",
-    "tools": "Tools & DevOps",
-    "soft": "Soft Skills"
+    "tools": "Tools & DevOps"
   },
   "experience": {
     "title": "Work Experience",
     "current": "Current",
     "present": "Present"
   },
-  "projects": {
-    "title": "Featured Projects",
-    "view": "View Project",
-    "github": "View on GitHub",
-    "demo": "Live Demo",
-    "techStack": "Tech Stack"
-  },
   "contact": {
     "title": "Let's Connect?",
     "description": "I'm always open to new opportunities and collaborations. Get in touch!",
-    "form": {
-      "name": "Name",
-      "email": "Email",
-      "message": "Message",
-      "submit": "Send Message",
-      "sending": "Sending...",
-      "success": "Message sent successfully!",
-      "error": "Error sending message. Please try again."
-    },
     "info": {
       "email": "Email",
-      "location": "Location",
-      "availability": "Availability"
+      "location": "Location"
     }
   },
   "footer": {
-    "rights": "All rights reserved.",
-    "madeWith": "Made with",
-    "sourceCode": "Source Code"
+    "rights": "All rights reserved."
   },
   "common": {
     "loading": "Loading...",
-    "learnMore": "Learn More",
-    "backToTop": "Back to Top"
+    "learnMore": "Learn More"
   }
 }

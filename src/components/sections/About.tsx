@@ -2,9 +2,10 @@
 
 import {useTranslations} from 'next-intl';
 import {motion} from 'framer-motion';
-import {skills, stats} from '@/lib/data';
+import {skills, stats, education, languages} from '@/lib/data';
 import {Badge} from '@/components/ui/badge';
 import {Card, CardContent} from '@/components/ui/card';
+import {GraduationCap, Languages} from 'lucide-react';
 
 export function About() {
   const t = useTranslations('about');
@@ -34,7 +35,6 @@ export function About() {
     {key: 'backend', label: ts('backend'), items: skills.backend, icon: '⚙️'},
     {key: 'database', label: ts('database'), items: skills.database, icon: '🗄️'},
     {key: 'tools', label: ts('tools'), items: skills.tools, icon: '🔧'},
-    {key: 'soft', label: ts('soft'), items: skills.soft.map(s => ({name: s, level: 100})), icon: '💡'},
   ];
 
   return (
@@ -78,7 +78,7 @@ export function About() {
           </motion.div>
 
           {/* Skills Grid */}
-          <div className="space-y-10">
+          <div className="space-y-10 mb-16">
             {skillsByCategory.map((category) => (
               <motion.div
                 key={category.key}
@@ -105,6 +105,56 @@ export function About() {
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          {/* Education & Languages */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Education */}
+            <motion.div variants={itemVariants}>
+              <div className="flex items-center gap-3 mb-5">
+                <GraduationCap className="h-6 w-6 text-green-400" />
+                <h3 className="text-xl font-semibold text-white">Formação</h3>
+              </div>
+              <div className="space-y-4">
+                {education.map((edu) => (
+                  <Card key={edu.id} className="border-zinc-800/50 bg-zinc-950/50 backdrop-blur-sm">
+                    <CardContent className="pt-4">
+                      <h4 className="text-white font-medium mb-1">{edu.degree}</h4>
+                      <a
+                        href={edu.institutionSite}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-green-400 text-sm hover:text-green-300 transition-colors"
+                      >
+                        {edu.institution}
+                      </a>
+                      <p className="text-zinc-500 text-sm mt-2">{edu.period}</p>
+                      <p className="text-zinc-400 text-sm mt-1">{edu.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Languages */}
+            <motion.div variants={itemVariants}>
+              <div className="flex items-center gap-3 mb-5">
+                <Languages className="h-6 w-6 text-green-400" />
+                <h3 className="text-xl font-semibold text-white">Idiomas</h3>
+              </div>
+              <div className="space-y-3">
+                {languages.map((lang, index) => (
+                  <Card key={index} className="border-zinc-800/50 bg-zinc-950/50 backdrop-blur-sm">
+                    <CardContent className="pt-4">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white font-medium">{lang.name}</span>
+                        <span className="text-zinc-400 text-sm">{lang.level}</span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
