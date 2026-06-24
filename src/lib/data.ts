@@ -70,6 +70,16 @@ export const experienceEN = [
   },
   {
     id: 2,
+    company: 'ExoStack',
+    companySite: 'https://exostack.com.br',
+    location: 'Curitiba, PR',
+    position: 'Technology Consultant',
+    period: '2024 - 2025',
+    description: 'Technical consultancy for MVP development for the Municipal Prefecture of São José dos Pinhais. Led complete Product Discovery including requirements gathering, technical scope definition, and user journey mapping. Actively participated in Sprint Review presenting the MVP to public sector stakeholders. Initial implementation using serverless architecture focused on scalability and government compliance.',
+    technologies: ['Product Discovery', 'Sprint Review', 'Serverless', 'Stakeholder Management', 'Scope Definition', 'MVP Development'],
+  },
+  {
+    id: 3,
     company: 'Inevent',
     companySite: 'https://inevent.com',
     location: 'Atlanta, Georgia',
@@ -79,7 +89,7 @@ export const experienceEN = [
     technologies: ['PHP', 'Laravel', 'Vue.js', 'MySQL', 'Firebase', 'AWS', 'Docker', 'Node.js'],
   },
   {
-    id: 3,
+    id: 4,
     company: 'IESDE',
     companySite: 'https://iesde.com.br',
     location: 'Curitiba, PR',
@@ -87,17 +97,7 @@ export const experienceEN = [
     period: '06/2021 - 02/2022',
     description: 'Developing and maintaining an E-learning platform for higher education institutions. Creating robust APIs in PHP (CodeIgniter) supporting hundreds of requests per minute. Data management with MySQL and optimization with Redis for caching. Maintaining payment system in Node.js with AWS Lambda.',
     technologies: ['PHP', 'CodeIgniter', 'MySQL', 'Redis', 'Node.js', 'AWS Lambda', 'JavaScript', 'jQuery'],
-  },
-  {
-    id: 4,
-    company: 'ExoStack',
-    companySite: 'https://exostack.com.br',
-    location: 'Curitiba, PR',
-    position: 'Technology Consultant',
-    period: '2021',
-    description: 'Technical consultancy for MVP development for the Municipal Prefecture of São José dos Pinhais. Led complete Product Discovery including requirements gathering, technical scope definition, and user journey mapping. Actively participated in Sprint Review presenting the MVP to public sector stakeholders. Initial implementation using serverless architecture focused on scalability and government compliance.',
-    technologies: ['Product Discovery', 'Sprint Review', 'Serverless', 'Stakeholder Management', 'Scope Definition', 'MVP Development'],
-  },
+  }
 ];
 
 // Educação - Português
