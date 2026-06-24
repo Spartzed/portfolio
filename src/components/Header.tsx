@@ -24,9 +24,9 @@ export function Header() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="text-xl font-bold text-white">
-            <span className="text-purple-500">&lt;</span>MRC
-            <span className="text-purple-500">/&gt;</span>
+          <Link href="/" className="text-xl font-bold text-white hover:text-green-400 transition-colors">
+            <span className="text-green-500">&lt;</span>MRC
+            <span className="text-green-500">/&gt;</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -35,7 +35,7 @@ export function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-zinc-400 hover:text-purple-400 transition-colors"
+                className="text-sm font-medium text-zinc-400 hover:text-green-400 transition-colors"
               >
                 {item.label}
               </a>
@@ -52,7 +52,7 @@ export function Header() {
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="h-10 w-10 rounded-lg border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-purple-500/50 transition-colors flex items-center justify-center"
+              className="h-10 w-10 rounded-lg border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/50 transition-colors flex items-center justify-center"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
@@ -73,7 +73,7 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-sm font-medium text-zinc-400 hover:text-purple-400 transition-colors"
+                  className="text-sm font-medium text-zinc-400 hover:text-green-400 transition-colors"
                 >
                   {item.label}
                 </a>

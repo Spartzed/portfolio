@@ -22,7 +22,7 @@ export function LanguageToggle() {
     <button
       onClick={toggleLanguage}
       disabled={isPending}
-      className="relative h-10 w-10 rounded-lg border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-purple-500/50 transition-colors disabled:opacity-50"
+      className="relative h-10 w-10 rounded-lg border border-zinc-800/50 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/50 transition-colors disabled:opacity-50"
       aria-label="Toggle language"
     >
       <span className="absolute inset-0 flex items-center justify-center text-xs font-bold text-zinc-400">

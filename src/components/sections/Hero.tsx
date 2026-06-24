@@ -8,7 +8,6 @@ import {GithubIcon, LinkedinIcon} from '@/components/ui/icons';
 
 export function Hero() {
   const t = useTranslations('hero');
-  const tn = useTranslations('nav');
 
   const containerVariants = {
     hidden: {opacity: 0},
@@ -36,28 +35,33 @@ export function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-950/20 via-zinc-950 to-zinc-950" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-500/10 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-green-950/20 via-zinc-950 to-zinc-950" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green-500/10 via-transparent to-transparent" />
+
+      {/* Animated grid */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,197,94,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,197,94,0.05)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      </div>
 
       {/* Animated particles */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(15)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute h-1 w-1 rounded-full bg-purple-500/30"
+            className="absolute h-1 w-1 rounded-full bg-green-500/40"
             initial={{
               x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
-              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1000),
+              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1000) + 500,
               opacity: 0,
             }}
             animate={{
-              y: [null, -(typeof window !== 'undefined' ? window.innerHeight : 1000)],
+              y: [null, -(typeof window !== 'undefined' ? window.innerHeight + 500 : 1500)],
               opacity: [0, 1, 0],
             }}
             transition={{
-              duration: Math.random() * 10 + 10,
+              duration: Math.random() * 15 + 15,
               repeat: Infinity,
-              delay: Math.random() * 5,
+              delay: Math.random() * 10,
             }}
           />
         ))}
@@ -73,40 +77,42 @@ export function Hero() {
           {/* Avatar */}
           <motion.div variants={itemVariants} className="mb-8">
             <div className="relative inline-block">
-              <div className="h-32 w-32 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-700 p-[2px]">
+              <div className="h-32 w-32 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-700 p-[2px] shadow-lg shadow-green-500/20">
                 <div className="h-full w-full rounded-2xl bg-zinc-950 flex items-center justify-center">
-                  <span className="text-5xl font-bold text-purple-400">MR</span>
+                  <span className="text-5xl font-bold text-green-400">MR</span>
                 </div>
               </div>
               <motion.div
-                className="absolute -bottom-2 -right-2 h-10 w-10 rounded-full bg-green-500 border-4 border-zinc-950"
+                className="absolute -bottom-2 -right-2 h-10 w-10 rounded-full bg-green-500 border-4 border-zinc-950 flex items-center justify-center"
                 animate={{
-                  scale: [1, 1.2, 1],
+                  scale: [1, 1.1, 1],
                 }}
                 transition={{
                   duration: 2,
                   repeat: Infinity,
                 }}
-              />
+              >
+                <span className="text-xs">✓</span>
+              </motion.div>
             </div>
           </motion.div>
 
           {/* Greeting */}
-          <motion.p variants={itemVariants} className="text-zinc-400 text-lg mb-2">
+          <motion.p variants={itemVariants} className="text-zinc-400 text-lg mb-2 font-medium">
             {t('greeting')}
           </motion.p>
 
           {/* Name */}
           <motion.h1
             variants={itemVariants}
-            className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-4"
+            className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-4 tracking-tight"
           >
             {t('name')}
           </motion.h1>
 
           {/* Title */}
           <motion.div variants={itemVariants} className="mb-6">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">
               {t('title')}
             </h2>
           </motion.div>
@@ -114,7 +120,7 @@ export function Hero() {
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="text-zinc-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10"
+            className="text-zinc-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
           >
             {t('description')}
           </motion.p>
@@ -123,14 +129,14 @@ export function Hero() {
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <a
               href="#projects"
-              className="h-12 px-8 rounded-full bg-gradient-to-r from-purple-500 to-purple-700 text-white font-medium hover:from-purple-600 hover:to-purple-800 transition-all hover:scale-105 flex items-center gap-2"
+              className="h-12 px-8 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium hover:from-green-600 hover:to-emerald-700 transition-all hover:scale-105 hover:shadow-lg hover:shadow-green-500/25 flex items-center gap-2"
             >
               {t('cta')}
               <ArrowDown className="h-4 w-4" />
             </a>
             <a
               href="#contact"
-              className="h-12 px-8 rounded-full border border-purple-500/50 text-purple-400 font-medium hover:bg-purple-500/10 transition-all flex items-center gap-2"
+              className="h-12 px-8 rounded-full border border-green-500/50 text-green-400 font-medium hover:bg-green-500/10 transition-all flex items-center gap-2"
             >
               {t('contact')}
             </a>
@@ -142,7 +148,7 @@ export function Hero() {
               href="https://github.com/marcusviniciusr"
               target="_blank"
               rel="noopener noreferrer"
-              className="h-12 w-12 rounded-full border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-purple-500/50 hover:text-purple-400 hover:scale-110 transition-all flex items-center justify-center text-zinc-400"
+              className="h-12 w-12 rounded-full border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/50 hover:text-green-400 hover:scale-110 transition-all flex items-center justify-center text-zinc-400"
               aria-label="GitHub"
             >
               <GithubIcon className="h-5 w-5" />
@@ -151,14 +157,14 @@ export function Hero() {
               href="https://www.linkedin.com/in/marcus-rodrigues-dev/"
               target="_blank"
               rel="noopener noreferrer"
-              className="h-12 w-12 rounded-full border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-purple-500/50 hover:text-purple-400 hover:scale-110 transition-all flex items-center justify-center text-zinc-400"
+              className="h-12 w-12 rounded-full border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/50 hover:text-green-400 hover:scale-110 transition-all flex items-center justify-center text-zinc-400"
               aria-label="LinkedIn"
             >
               <LinkedinIcon className="h-5 w-5" />
             </a>
             <a
               href="mailto:marcusr.dev@gmail.com"
-              className="h-12 w-12 rounded-full border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-purple-500/50 hover:text-purple-400 hover:scale-110 transition-all flex items-center justify-center text-zinc-400"
+              className="h-12 w-12 rounded-full border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/50 hover:text-green-400 hover:scale-110 transition-all flex items-center justify-center text-zinc-400"
               aria-label="Email"
             >
               <Mail className="h-5 w-5" />
@@ -179,9 +185,9 @@ export function Hero() {
           repeat: Infinity,
           delay: 1,
         }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
-        <a href="#skills" className="text-zinc-500 hover:text-purple-400 transition-colors">
+        <a href="#skills" className="text-zinc-500 hover:text-green-400 transition-colors">
           <ArrowDown className="h-6 w-6" />
         </a>
       </motion.div>

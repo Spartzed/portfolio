@@ -1,20 +1,22 @@
 import {routing} from '@/i18n/routing';
-import {Geist, Geist_Mono} from 'next/font/google';
+import {Inter, JetBrains_Mono} from 'next/font/google';
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const inter = Inter({
+  variable: '--font-sans',
   subsets: ['latin'],
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const jetbrainsMono = JetBrains_Mono({
+  variable: '--font-mono',
   subsets: ['latin'],
+  display: 'swap',
 });
 
 export const metadata = {
   title: 'Marcus Rodrigues | Full Stack Developer',
-  description: 'Portfolio de Marcus Rodrigues, Desenvolvedor Full Stack especializado em React, Next.js e Node.js.',
+  description: 'Portfolio de Marcus Rodrigues, Desenvolvedor Full Stack especializado em C#/.NET, PHP/Laravel e JavaScript.',
 };
 
 export default function RootLayout({
@@ -24,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">{children}</body>

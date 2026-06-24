@@ -20,7 +20,7 @@ export function Footer() {
               href="https://github.com/marcusviniciusr"
               target="_blank"
               rel="noopener noreferrer"
-              className="h-10 w-10 rounded-lg border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-purple-500/50 hover:text-purple-400 transition-colors flex items-center justify-center text-zinc-400"
+              className="h-10 w-10 rounded-lg border border-zinc-800/50 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/50 hover:text-green-400 transition-colors flex items-center justify-center text-zinc-400"
               aria-label="GitHub"
             >
               <GithubIcon className="h-5 w-5" />
@@ -29,14 +29,14 @@ export function Footer() {
               href="https://www.linkedin.com/in/marcus-rodrigues-dev/"
               target="_blank"
               rel="noopener noreferrer"
-              className="h-10 w-10 rounded-lg border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-purple-500/50 hover:text-purple-400 transition-colors flex items-center justify-center text-zinc-400"
+              className="h-10 w-10 rounded-lg border border-zinc-800/50 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/50 hover:text-green-400 transition-colors flex items-center justify-center text-zinc-400"
               aria-label="LinkedIn"
             >
               <LinkedinIcon className="h-5 w-5" />
             </a>
             <a
               href="mailto:marcusr.dev@gmail.com"
-              className="h-10 w-10 rounded-lg border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-purple-500/50 hover:text-purple-400 transition-colors flex items-center justify-center text-zinc-400"
+              className="h-10 w-10 rounded-lg border border-zinc-800/50 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/50 hover:text-green-400 transition-colors flex items-center justify-center text-zinc-400"
               aria-label="Email"
             >
               <Mail className="h-5 w-5" />

@@ -49,7 +49,7 @@ export function Experience() {
           {/* Timeline */}
           <div className="relative">
             {/* Vertical Line */}
-            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 to-transparent md:-translate-x-1/2" />
+            <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-green-500 via-green-500/50 to-transparent md:-translate-x-1/2" />
 
             {/* Experience Items */}
             {experience.map((exp, index) => (
@@ -61,7 +61,7 @@ export function Experience() {
                 }`}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-purple-500 border-4 border-zinc-950 -translate-x-[7px] md:-translate-x-1/2" />
+                <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-green-500 border-4 border-zinc-950 shadow-lg shadow-green-500/50 -translate-x-[7px] md:-translate-x-1/2" />
 
                 {/* Content */}
                 <div
@@ -71,18 +71,18 @@ export function Experience() {
                       : 'md:pl-12'
                   }`}
                 >
-                  <Card className="border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-purple-500/50 transition-all hover:shadow-lg hover:shadow-purple-500/10">
+                  <Card className="border-zinc-800/50 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/30 transition-all hover:shadow-lg hover:shadow-green-500/5">
                     <CardContent className="pt-6">
                       <div className="flex items-start justify-between gap-4 mb-3">
                         <div className="flex items-center gap-3">
-                          <div className="h-12 w-12 rounded-xl bg-purple-500/10 flex items-center justify-center">
-                            <Building2 className="h-6 w-6 text-purple-400" />
+                          <div className="h-12 w-12 rounded-xl bg-green-500/10 flex items-center justify-center">
+                            <Building2 className="h-6 w-6 text-green-400" />
                           </div>
                           <div>
                             <h3 className="text-xl font-semibold text-white">
                               {exp.position}
                             </h3>
-                            <p className="text-purple-400">{exp.company}</p>
+                            <p className="text-green-400">{exp.company}</p>
                           </div>
                         </div>
                       </div>
@@ -92,14 +92,14 @@ export function Experience() {
                         {exp.period}
                       </div>
 
-                      <p className="text-zinc-400 mb-4">{exp.description}</p>
+                      <p className="text-zinc-400 mb-4 leading-relaxed">{exp.description}</p>
 
                       <div className="flex flex-wrap gap-2">
                         {exp.technologies.map((tech) => (
                           <Badge
                             key={tech}
                             variant="outline"
-                            className="border-zinc-800 bg-zinc-950/50 text-zinc-300"
+                            className="border-zinc-800/50 bg-zinc-950/30 text-zinc-300"
                           >
                             {tech}
                           </Badge>

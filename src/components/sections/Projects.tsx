@@ -33,7 +33,7 @@ export function Projects() {
   return (
     <section id="projects" className="py-24 relative">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-950/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-950/10 to-transparent" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -58,14 +58,15 @@ export function Projects() {
                 variants={itemVariants}
                 whileHover={{y: -5}}
               >
-                <Card className="h-full border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-purple-500/50 transition-all group hover:shadow-lg hover:shadow-purple-500/10">
+                <Card className="h-full border-zinc-800/50 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/30 transition-all group hover:shadow-lg hover:shadow-green-500/5">
                   <CardHeader>
-                    <div className="h-48 rounded-lg bg-gradient-to-br from-purple-500/20 to-purple-700/20 mb-4 flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-purple-700/30 transition-all">
-                      <span className="text-6xl font-bold text-purple-400/50 group-hover:text-purple-400 transition-all">
+                    <div className="h-48 rounded-lg bg-gradient-to-br from-green-500/20 to-emerald-700/20 mb-4 flex items-center justify-center group-hover:from-green-500/30 group-hover:to-emerald-700/30 transition-all relative overflow-hidden">
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <span className="text-6xl font-bold text-green-400/50 group-hover:text-green-400 transition-all relative z-10">
                         {String(project.id).padStart(2, '0')}
                       </span>
                     </div>
-                    <CardTitle className="text-white group-hover:text-purple-400 transition-colors">
+                    <CardTitle className="text-white group-hover:text-green-400 transition-colors">
                       {project.title}
                     </CardTitle>
                     <CardDescription className="text-zinc-400">
@@ -78,7 +79,7 @@ export function Projects() {
                         <Badge
                           key={tech}
                           variant="outline"
-                          className="border-zinc-800 bg-zinc-950/50 text-zinc-300 text-xs"
+                          className="border-zinc-800/50 bg-zinc-950/30 text-zinc-300 text-xs"
                         >
                           {tech}
                         </Badge>
@@ -90,7 +91,7 @@ export function Projects() {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 h-10 rounded-lg border border-zinc-800 bg-zinc-950/50 hover:border-purple-500/50 hover:text-purple-400 transition-all flex items-center justify-center gap-2 text-sm text-zinc-400"
+                        className="flex-1 h-10 rounded-lg border border-zinc-800/50 bg-zinc-950/30 hover:border-green-500/50 hover:text-green-400 hover:bg-green-500/10 transition-all flex items-center justify-center gap-2 text-sm text-zinc-400"
                       >
                         <GithubIcon className="h-4 w-4" />
                         {t('github')}
@@ -100,7 +101,7 @@ export function Projects() {
                           href={project.demo}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex-1 h-10 rounded-lg border border-zinc-800 bg-zinc-950/50 hover:border-purple-500/50 hover:text-purple-400 transition-all flex items-center justify-center gap-2 text-sm text-zinc-400"
+                          className="flex-1 h-10 rounded-lg border border-zinc-800/50 bg-zinc-950/30 hover:border-green-500/50 hover:text-green-400 hover:bg-green-500/10 transition-all flex items-center justify-center gap-2 text-sm text-zinc-400"
                         >
                           <ExternalLink className="h-4 w-4" />
                           {t('demo')}
