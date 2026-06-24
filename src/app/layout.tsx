@@ -17,6 +17,10 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata = {
   title: 'Marcus Rodrigues | Full Stack Developer',
   description: 'Portfolio de Marcus Rodrigues, Desenvolvedor Full Stack especializado em C#/.NET, PHP/Laravel e JavaScript.',
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({

@@ -24,7 +24,7 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="text-xl font-bold text-foreground hover:text-green-500 transition-colors">
-            <span className="text-green-500">&lt;</span>MRC
+            <span className="text-green-500">&lt;</span>MR
             <span className="text-green-500">/&gt;</span>
           </Link>
 

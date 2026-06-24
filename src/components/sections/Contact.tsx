@@ -2,13 +2,15 @@
 
 import {useTranslations} from 'next-intl';
 import {motion} from 'framer-motion';
+import {useState} from 'react';
 import {Card, CardContent} from '@/components/ui/card';
-import {Mail, MapPin, MessageCircle, Send} from 'lucide-react';
+import {Mail, MapPin, MessageCircle, Send, Eye, ShieldCheck} from 'lucide-react';
 import {useData} from '@/lib/useData';
 
 export function Contact() {
   const t = useTranslations('contact');
   const {personalInfo} = useData();
+  const [showContact, setShowContact] = useState(false);
 
   const containerVariants = {
     hidden: {opacity: 0},
@@ -35,6 +37,10 @@ export function Contact() {
 
   const emailLink = `mailto:${personalInfo.email}?subject=Contato via Portfolio&body=Olá Marcus!`;
 
+  const handleRevealContact = () => {
+    setShowContact(true);
+  };
+
   return (
     <section id="contact" className="py-24 relative">
       {/* Background gradient */}
@@ -58,31 +64,58 @@ export function Contact() {
 
           {/* Contact Cards */}
           <motion.div variants={itemVariants} className="grid md:grid-cols-2 gap-6 mb-8">
-            {/* WhatsApp Card */}
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group"
-            >
-              <Card className="h-full border-border bg-card/50 backdrop-blur-sm hover:border-green-500/50 transition-all hover:shadow-lg hover:shadow-green-500/10">
-                <CardContent className="pt-8">
-                  <div className="h-16 w-16 rounded-2xl bg-green-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500/20 transition-colors">
-                    <MessageCircle className="h-8 w-8 text-green-500 dark:text-green-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground text-center mb-2">
-                    WhatsApp
-                  </h3>
-                  <p className="text-muted-foreground text-center text-sm mb-4">
-                    {personalInfo.phone}
-                  </p>
-                  <div className="flex items-center justify-center gap-2 text-green-500 dark:text-green-400 text-sm font-medium">
-                    <span>{t('startChat')}</span>
-                    <Send className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </CardContent>
-              </Card>
-            </a>
+            {/* WhatsApp/Contact Card */}
+            {!showContact ? (
+              // Privacy protection - reveal button
+              <button
+                onClick={handleRevealContact}
+                className="group text-left"
+              >
+                <Card className="h-full border-border bg-card/50 backdrop-blur-sm hover:border-green-500/50 transition-all hover:shadow-lg hover:shadow-green-500/10">
+                  <CardContent className="pt-8 h-full flex flex-col items-center justify-center">
+                    <div className="h-16 w-16 rounded-2xl bg-green-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500/20 transition-colors">
+                      <ShieldCheck className="h-8 w-8 text-green-500 dark:text-green-400" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground text-center mb-2">
+                      Contato
+                    </h3>
+                    <p className="text-muted-foreground text-center text-sm mb-4">
+                      Clique para ver as opções de contato
+                    </p>
+                    <div className="flex items-center justify-center gap-2 text-green-500 dark:text-green-400 text-sm font-medium">
+                      <span>Revelar contato</span>
+                      <Eye className="h-4 w-4 group-hover:scale-110 transition-transform" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </button>
+            ) : (
+              // WhatsApp Card (revealed)
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
+                <Card className="h-full border-border bg-card/50 backdrop-blur-sm hover:border-green-500/50 transition-all hover:shadow-lg hover:shadow-green-500/10">
+                  <CardContent className="pt-8">
+                    <div className="h-16 w-16 rounded-2xl bg-green-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500/20 transition-colors">
+                      <MessageCircle className="h-8 w-8 text-green-500 dark:text-green-400" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground text-center mb-2">
+                      WhatsApp
+                    </h3>
+                    <p className="text-muted-foreground text-center text-sm mb-4">
+                      {personalInfo.phone}
+                    </p>
+                    <div className="flex items-center justify-center gap-2 text-green-500 dark:text-green-400 text-sm font-medium">
+                      <span>{t('startChat')}</span>
+                      <Send className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </a>
+            )}
 
             {/* Email Card */}
             <a
