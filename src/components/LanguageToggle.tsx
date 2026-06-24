@@ -22,13 +22,15 @@ export function LanguageToggle() {
     <button
       onClick={toggleLanguage}
       disabled={isPending}
-      className="relative h-10 w-10 rounded-lg border border-zinc-800/50 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/50 transition-colors disabled:opacity-50"
+      className="relative h-10 w-[70px] rounded-lg border border-border bg-card/50 backdrop-blur-sm hover:border-green-500/50 transition-all disabled:opacity-50 group"
       aria-label="Toggle language"
     >
-      <span className="absolute inset-0 flex items-center justify-center text-xs font-bold text-zinc-400">
-        {locale === 'pt' ? 'PT' : 'EN'}
-      </span>
-      <Globe className="h-5 w-5 text-zinc-400" />
+      <div className="flex items-center justify-center gap-1.5">
+        <Globe className="h-4 w-4 text-muted-foreground group-hover:text-green-500 transition-colors" />
+        <span className="text-sm font-semibold text-foreground">
+          {locale === 'pt' ? 'PT' : 'EN'}
+        </span>
+      </div>
     </button>
   );
 }

@@ -50,10 +50,10 @@ export function About() {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
               {t('title')}
             </h2>
-            <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               {t('description')}
             </p>
           </motion.div>
@@ -61,18 +61,18 @@ export function About() {
           {/* Stats */}
           <motion.div
             variants={itemVariants}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16"
           >
             {stats.map((stat, index) => (
               <Card
                 key={index}
-                className="border-zinc-800/50 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/30 transition-all hover:shadow-lg hover:shadow-green-500/5"
+                className="border-border/50 bg-card/50 backdrop-blur-sm hover:border-green-500/30 transition-all hover:shadow-lg hover:shadow-green-500/5"
               >
                 <CardContent className="pt-6 text-center">
-                  <div className="text-3xl sm:text-4xl font-bold text-green-400 mb-2">
+                  <div className="text-3xl sm:text-4xl font-bold text-green-500 dark:text-green-400 mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-zinc-400 text-sm font-medium">{stat.label}</div>
+                  <div className="text-muted-foreground text-sm font-medium">{stat.label}</div>
                 </CardContent>
               </Card>
             ))}
@@ -88,7 +88,7 @@ export function About() {
               >
                 <div className="flex items-center gap-3 mb-5">
                   <span className="text-2xl">{category.icon}</span>
-                  <h3 className="text-xl font-semibold text-white">
+                  <h3 className="text-xl font-semibold text-foreground">
                     {category.label}
                   </h3>
                   <div className="flex-1 h-px bg-gradient-to-r from-green-500/50 to-transparent" />
@@ -98,7 +98,7 @@ export function About() {
                     <Badge
                       key={skill.name}
                       variant="outline"
-                      className="border-zinc-800/50 bg-zinc-950/30 text-zinc-300 hover:border-green-500/50 hover:bg-green-500/10 hover:text-green-400 transition-all cursor-default px-3 py-1.5"
+                      className="border-border/50 bg-card/30 text-foreground hover:border-green-500/50 hover:bg-green-500/10 hover:text-green-500 dark:hover:text-green-400 transition-all cursor-default px-3 py-1.5"
                     >
                       {skill.name}
                     </Badge>
@@ -113,24 +113,24 @@ export function About() {
             {/* Education */}
             <motion.div variants={itemVariants}>
               <div className="flex items-center gap-3 mb-5">
-                <GraduationCap className="h-6 w-6 text-green-400" />
-                <h3 className="text-xl font-semibold text-white">Formação</h3>
+                <GraduationCap className="h-6 w-6 text-green-500 dark:text-green-400" />
+                <h3 className="text-xl font-semibold text-foreground">Formação</h3>
               </div>
               <div className="space-y-4">
                 {education.map((edu) => (
-                  <Card key={edu.id} className="border-zinc-800/50 bg-zinc-950/50 backdrop-blur-sm">
+                  <Card key={edu.id} className="border-border/50 bg-card/50 backdrop-blur-sm">
                     <CardContent className="pt-4">
-                      <h4 className="text-white font-medium mb-1">{edu.degree}</h4>
+                      <h4 className="text-foreground font-medium mb-1">{edu.degree}</h4>
                       <a
                         href={edu.institutionSite}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-green-400 text-sm hover:text-green-300 transition-colors"
+                        className="text-green-500 dark:text-green-400 text-sm hover:text-green-400 dark:hover:text-green-300 transition-colors"
                       >
                         {edu.institution}
                       </a>
-                      <p className="text-zinc-500 text-sm mt-2">{edu.period}</p>
-                      <p className="text-zinc-400 text-sm mt-1">{edu.description}</p>
+                      <p className="text-muted-foreground text-sm mt-2">{edu.period}</p>
+                      <p className="text-muted-foreground/80 text-sm mt-1">{edu.description}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -140,16 +140,16 @@ export function About() {
             {/* Languages */}
             <motion.div variants={itemVariants}>
               <div className="flex items-center gap-3 mb-5">
-                <Languages className="h-6 w-6 text-green-400" />
-                <h3 className="text-xl font-semibold text-white">Idiomas</h3>
+                <Languages className="h-6 w-6 text-green-500 dark:text-green-400" />
+                <h3 className="text-xl font-semibold text-foreground">Idiomas</h3>
               </div>
               <div className="space-y-3">
                 {languages.map((lang, index) => (
-                  <Card key={index} className="border-zinc-800/50 bg-zinc-950/50 backdrop-blur-sm">
+                  <Card key={index} className="border-border/50 bg-card/50 backdrop-blur-sm">
                     <CardContent className="pt-4">
                       <div className="flex items-center justify-between">
-                        <span className="text-white font-medium">{lang.name}</span>
-                        <span className="text-zinc-400 text-sm">{lang.level}</span>
+                        <span className="text-foreground font-medium">{lang.name}</span>
+                        <span className="text-muted-foreground text-sm">{lang.level}</span>
                       </div>
                     </CardContent>
                   </Card>

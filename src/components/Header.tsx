@@ -19,11 +19,11 @@ export function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-zinc-800/50 bg-zinc-950/80 backdrop-blur-xl">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 dark:bg-zinc-950/80 backdrop-blur-xl">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="text-xl font-bold text-white hover:text-green-400 transition-colors">
+          <Link href="/" className="text-xl font-bold text-foreground hover:text-green-500 transition-colors">
             <span className="text-green-500">&lt;</span>MRC
             <span className="text-green-500">/&gt;</span>
           </Link>
@@ -34,7 +34,7 @@ export function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-zinc-400 hover:text-green-400 transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-green-500 transition-colors"
               >
                 {item.label}
               </a>
@@ -51,13 +51,13 @@ export function Header() {
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="h-10 w-10 rounded-lg border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/50 transition-colors flex items-center justify-center"
+              className="h-10 w-10 rounded-lg border border-border bg-card/50 backdrop-blur-sm hover:border-green-500/50 transition-colors flex items-center justify-center"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
-                <X className="h-5 w-5 text-zinc-400" />
+                <X className="h-5 w-5 text-muted-foreground" />
               ) : (
-                <Menu className="h-5 w-5 text-zinc-400" />
+                <Menu className="h-5 w-5 text-muted-foreground" />
               )}
             </button>
           </div>
@@ -65,14 +65,14 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-zinc-800/50">
+          <div className="md:hidden py-4 border-t border-border/50">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-sm font-medium text-zinc-400 hover:text-green-400 transition-colors"
+                  className="text-sm font-medium text-muted-foreground hover:text-green-500 transition-colors"
                 >
                   {item.label}
                 </a>

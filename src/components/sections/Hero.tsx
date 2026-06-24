@@ -37,7 +37,7 @@ export function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-950/20 via-zinc-950 to-zinc-950" />
+      <div className="absolute inset-0 bg-gradient-to-br from-green-950/20 via-background to-background dark:via-zinc-950 dark:to-zinc-950" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green-500/10 via-transparent to-transparent" />
 
       {/* Animated grid */}
@@ -79,13 +79,13 @@ export function Hero() {
           {/* Avatar */}
           <motion.div variants={itemVariants} className="mb-8">
             <div className="relative inline-block">
-              <div className="h-32 w-32 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-700 p-[2px] shadow-lg shadow-green-500/20">
-                <div className="h-full w-full rounded-2xl bg-zinc-950 flex items-center justify-center">
-                  <span className="text-5xl font-bold text-green-400">MR</span>
+              <div className="h-32 w-32 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-700 p-[2px] shadow-lg shadow-green-500/20 dark:shadow-green-500/20">
+                <div className="h-full w-full rounded-2xl bg-background flex items-center justify-center">
+                  <span className="text-5xl font-bold text-green-500">MR</span>
                 </div>
               </div>
               <motion.div
-                className="absolute -bottom-2 -right-2 h-10 w-10 rounded-full bg-green-500 border-4 border-zinc-950 flex items-center justify-center"
+                className="absolute -bottom-2 -right-2 h-10 w-10 rounded-full bg-green-500 border-4 border-background flex items-center justify-center"
                 animate={{
                   scale: [1, 1.1, 1],
                 }}
@@ -150,7 +150,7 @@ export function Hero() {
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="h-12 w-12 rounded-full border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/50 hover:text-green-400 hover:scale-110 transition-all flex items-center justify-center text-zinc-400"
+              className="h-12 w-12 rounded-full border border-border bg-card/50 backdrop-blur-sm hover:border-green-500/50 hover:text-green-500 hover:scale-110 transition-all flex items-center justify-center text-muted-foreground"
               aria-label="GitHub"
             >
               <GithubIcon className="h-5 w-5" />
@@ -159,14 +159,14 @@ export function Hero() {
               href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="h-12 w-12 rounded-full border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/50 hover:text-green-400 hover:scale-110 transition-all flex items-center justify-center text-zinc-400"
+              className="h-12 w-12 rounded-full border border-border bg-card/50 backdrop-blur-sm hover:border-green-500/50 hover:text-green-500 hover:scale-110 transition-all flex items-center justify-center text-muted-foreground"
               aria-label="LinkedIn"
             >
               <LinkedinIcon className="h-5 w-5" />
             </a>
             <a
               href={`mailto:${personalInfo.email}`}
-              className="h-12 w-12 rounded-full border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/50 hover:text-green-400 hover:scale-110 transition-all flex items-center justify-center text-zinc-400"
+              className="h-12 w-12 rounded-full border border-border bg-card/50 backdrop-blur-sm hover:border-green-500/50 hover:text-green-500 hover:scale-110 transition-all flex items-center justify-center text-muted-foreground"
               aria-label="Email"
             >
               <Mail className="h-5 w-5" />
@@ -189,7 +189,7 @@ export function Hero() {
         }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
-        <a href="#skills" className="text-zinc-500 hover:text-green-400 transition-colors">
+        <a href="#skills" className="text-muted-foreground hover:text-green-500 transition-colors">
           <ArrowDown className="h-6 w-6" />
         </a>
       </motion.div>

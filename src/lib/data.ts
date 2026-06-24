@@ -8,7 +8,7 @@ export const personalInfo = {
   locationEN: 'Curitiba, PR - Brazil',
   phone: '(41) 99590-8607',
   availability: 'Open to opportunities',
-  github: 'https://github.com/marcusviniciusr',
+  github: 'https://github.com/Spartzed',
   linkedin: 'https://www.linkedin.com/in/marcus-rodrigues-dev/',
 };
 
@@ -193,14 +193,12 @@ export const languagesEN = [
 // Stats
 export const stats = [
   {value: '5+', label: 'Anos de Experiência'},
-  {value: '15+', label: 'Projetos Entregues'},
   {value: '10+', label: 'Tecnologias'},
   {value: '100%', label: 'Dedicação'},
 ];
 
 export const statsEN = [
   {value: '5+', label: 'Years of Experience'},
-  {value: '15+', label: 'Projects Delivered'},
   {value: '10+', label: 'Technologies'},
   {value: '100%', label: 'Dedication'},
 ];

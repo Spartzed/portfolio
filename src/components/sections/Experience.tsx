@@ -41,7 +41,7 @@ export function Experience() {
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
               {t('title')}
             </h2>
           </motion.div>
@@ -61,7 +61,7 @@ export function Experience() {
                 }`}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-green-500 border-4 border-zinc-950 shadow-lg shadow-green-500/50 -translate-x-[7px] md:-translate-x-1/2" />
+                <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-green-500 border-4 border-background shadow-lg shadow-green-500/50 -translate-x-[7px] md:-translate-x-1/2" />
 
                 {/* Content */}
                 <div
@@ -71,12 +71,12 @@ export function Experience() {
                       : 'md:pl-12'
                   }`}
                 >
-                  <div className="border-zinc-800/50 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/30 transition-all hover:shadow-lg hover:shadow-green-500/5 rounded-xl p-6">
+                  <div className="border-border/50 bg-card/50 backdrop-blur-sm hover:border-green-500/30 transition-all hover:shadow-lg hover:shadow-green-500/5 rounded-xl p-6">
                     <div className="flex items-start justify-between gap-4 mb-3">
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
-                          <Building2 className="h-5 w-5 text-green-400" />
-                          <h3 className="text-xl font-semibold text-white">
+                          <Building2 className="h-5 w-5 text-green-500 dark:text-green-400" />
+                          <h3 className="text-xl font-semibold text-foreground">
                             {exp.position}
                           </h3>
                         </div>
@@ -84,7 +84,7 @@ export function Experience() {
                           href={exp.companySite}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-green-400 hover:text-green-300 transition-colors flex items-center gap-1 text-sm font-medium"
+                          className="text-green-500 dark:text-green-400 hover:text-green-400 dark:hover:text-green-300 transition-colors flex items-center gap-1 text-sm font-medium"
                         >
                           {exp.company}
                           <ExternalLink className="h-3 w-3" />
@@ -92,7 +92,7 @@ export function Experience() {
                       </div>
                     </div>
 
-                    <div className="flex flex-wrap items-center gap-4 text-zinc-500 text-sm mb-4">
+                    <div className="flex flex-wrap items-center gap-4 text-muted-foreground text-sm mb-4">
                       <div className="flex items-center gap-1">
                         <Calendar className="h-4 w-4" />
                         {exp.period}
@@ -103,7 +103,7 @@ export function Experience() {
                       </div>
                     </div>
 
-                    <p className="text-zinc-400 mb-4 leading-relaxed text-left">
+                    <p className="text-muted-foreground/90 mb-4 leading-relaxed text-left">
                       {exp.description}
                     </p>
 
@@ -112,7 +112,7 @@ export function Experience() {
                         <Badge
                           key={tech}
                           variant="outline"
-                          className="border-zinc-800/50 bg-zinc-950/30 text-zinc-300 text-xs"
+                          className="border-border/50 bg-card/30 text-foreground text-xs"
                         >
                           {tech}
                         </Badge>

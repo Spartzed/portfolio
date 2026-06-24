@@ -36,6 +36,8 @@
   "contact": {
     "title": "Let's Connect?",
     "description": "I'm always open to new opportunities and collaborations. Get in touch!",
+    "startChat": "Start chat",
+    "sendEmail": "Send email",
     "info": {
       "email": "Email",
       "location": "Location"
