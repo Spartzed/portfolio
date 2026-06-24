@@ -127,8 +127,10 @@ export const educationEN = [
 // Skills - Português
 export const skillsPT = {
   frontend: [
-    {name: 'Vue.js', level: 90},
     {name: 'JavaScript', level: 90},
+    {name: 'TypeScript', level: 85},
+    {name: 'Vue.js', level: 90},
+    {name: 'Next.js', level: 70},
     {name: 'HTML/CSS', level: 95},
     {name: 'jQuery', level: 85},
   ],
@@ -145,6 +147,7 @@ export const skillsPT = {
     {name: 'MySQL', level: 90},
     {name: 'PostgreSQL', level: 85},
     {name: 'PostGIS', level: 80},
+    {name: 'SQLServer', level: 80},
     {name: 'Firebase', level: 75},
     {name: 'Redis', level: 80},
   ],
@@ -154,6 +157,8 @@ export const skillsPT = {
     {name: 'CI/CD', level: 85},
     {name: 'Git', level: 90},
     {name: 'AWS Lambda', level: 75},
+    {name: 'Claude Code', level: 80},
+    {name: 'Antigravity', level: 80},
   ],
 };
 

@@ -4,6 +4,7 @@ import {getMessages} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
+import {BackgroundWrapper} from '@/components/BackgroundWrapper';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
@@ -29,11 +30,11 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <div className="flex flex-col min-h-screen">
+      <BackgroundWrapper>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
-      </div>
+      </BackgroundWrapper>
     </NextIntlClientProvider>
   );
 }
