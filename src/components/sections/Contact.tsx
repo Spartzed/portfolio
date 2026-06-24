@@ -112,7 +112,7 @@ export function Contact() {
           {/* Additional Info */}
           <motion.div variants={itemVariants} className="text-center">
             <Card className="border-border/30 bg-card/30 backdrop-blur-sm">
-              <CardContent className="pt-6">
+              <CardContent>
                 <div className="flex items-center justify-center gap-2 text-muted-foreground text-sm">
                   <MapPin className="h-4 w-4" />
                   <span>{personalInfo.location}</span>

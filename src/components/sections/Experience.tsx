@@ -71,7 +71,7 @@ export function Experience() {
                       : 'md:pl-12'
                   }`}
                 >
-                  <div className="border-border/50 bg-card/50 backdrop-blur-sm hover:border-green-500/30 transition-all hover:shadow-lg hover:shadow-green-500/5 rounded-xl p-6">
+                  <div className="border-border/50 bg-card/50 backdrop-blur-sm hover:border-green-500/30 transition-all hover:shadow-lg hover:shadow-green-500/5 rounded-xl p-5">
                     <div className="flex items-start justify-between gap-4 mb-3">
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">

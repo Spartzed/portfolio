@@ -74,7 +74,7 @@ export function Hero() {
           {/* Name */}
           <motion.h1
             variants={itemVariants}
-            className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-4 tracking-tight"
+            className="text-5xl sm:text-6xl md:text-7xl font-bold text-foreground mb-4 tracking-tight"
           >
             {personalInfo.name}
           </motion.h1>

@@ -76,9 +76,10 @@ export function NeuralNetworkBg() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       const isDark = document.documentElement.classList.contains('dark');
-      const nodeColor = isDark ? 'rgba(74, 222, 128,' : 'rgba(34, 197, 94,';
-      const glowColor = isDark ? 'rgba(74, 222, 128, 0.15)' : 'rgba(34, 197, 94, 0.1)';
-      const mouseColor = isDark ? 'rgba(74, 222, 128,' : 'rgba(34, 197, 94,';
+      // Use darker green for light mode, lighter for dark mode
+      const nodeColor = isDark ? 'rgba(74, 222, 128,' : 'rgba(22, 163, 74,'; // green-400 for dark, green-600 for light
+      const glowColor = isDark ? 'rgba(74, 222, 128, 0.15)' : 'rgba(22, 163, 74, 0.2)';
+      const mouseColor = isDark ? 'rgba(74, 222, 128,' : 'rgba(22, 163, 74,';
 
       const time = Date.now() * 0.001;
       const mouse = mouseRef.current;
@@ -277,8 +278,8 @@ export function NeuralNetworkBg() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-full h-full opacity-60"
-      style={{mixBlendMode: 'screen'}}
+      className="fixed inset-0 w-full h-full opacity-80 dark:opacity-60"
+      style={{mixBlendMode: 'dark:mix-blend-screen'}}
     />
   );
 }
