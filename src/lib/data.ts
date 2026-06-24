@@ -1,56 +1,19 @@
+// Dados pessoais
 export const personalInfo = {
   name: 'Marcus Rodrigues',
   title: 'Full Stack Developer',
+  titleEN: 'Software Engineer',
   email: 'marcusr.dev@gmail.com',
   location: 'Curitiba, PR - Brasil',
+  locationEN: 'Curitiba, PR - Brazil',
   phone: '(41) 99590-8607',
   availability: 'Open to opportunities',
   github: 'https://github.com/marcusviniciusr',
   linkedin: 'https://www.linkedin.com/in/marcus-rodrigues-dev/',
 };
 
-export const skills = {
-  frontend: [
-    {name: 'Vue.js', level: 90},
-    {name: 'JavaScript', level: 90},
-    {name: 'HTML/CSS', level: 95},
-    {name: 'jQuery', level: 85},
-  ],
-  backend: [
-    {name: 'PHP', level: 95},
-    {name: 'Laravel', level: 90},
-    {name: 'C# / .NET', level: 85},
-    {name: 'Java', level: 80},
-    {name: 'Node.js', level: 75},
-    {name: 'Python', level: 80},
-    {name: 'REST APIs', level: 90},
-  ],
-  database: [
-    {name: 'MySQL', level: 90},
-    {name: 'PostgreSQL', level: 85},
-    {name: 'PostGIS', level: 80},
-    {name: 'Firebase', level: 75},
-    {name: 'Redis', level: 80},
-  ],
-  tools: [
-    {name: 'Docker', level: 85},
-    {name: 'AWS', level: 85},
-    {name: 'CI/CD', level: 85},
-    {name: 'Git', level: 90},
-    {name: 'AWS Lambda', level: 75},
-  ],
-  soft: [
-    'Comunicação Efetiva',
-    'Trabalho em Equipe',
-    'Resolução de Problemas',
-    'Aprendizado Contínuo',
-    'Arquitetura Limpa',
-    'Escalabilidade',
-    'Microserviços',
-  ],
-};
-
-export const experience = [
+// Experiência - Português
+export const experiencePT = [
   {
     id: 1,
     company: 'Aleevia',
@@ -83,7 +46,42 @@ export const experience = [
   },
 ];
 
-export const education = [
+// Experiência - Inglês
+export const experienceEN = [
+  {
+    id: 1,
+    company: 'Aleevia',
+    companySite: 'https://aleevia.com.br',
+    location: 'São José dos Campos, SP',
+    position: 'Software Engineer',
+    period: '02/2025 - Present',
+    description: 'Contributing from product conception to development of a clinic management platform, with complete appointment scheduling, health plans, billing, and bank reconciliation systems. Working as Backend Developer using Java and PHP with Laravel, defining database architecture and implementing PostGIS for geolocation calculations.',
+    technologies: ['PHP', 'Laravel', 'Java', 'PostgreSQL', 'PostGIS', 'Docker'],
+  },
+  {
+    id: 2,
+    company: 'Inevent',
+    companySite: 'https://inevent.com',
+    location: 'Atlanta, Georgia',
+    position: 'Full Stack Developer',
+    period: '02/2022 - 03/2025',
+    description: 'Developing and maintaining multi-event platforms. Backend with PHP/Laravel creating robust and scalable RESTful APIs and microservices. Frontend with Vue.js and jQuery in legacy systems. Infrastructure with Docker and AWS services, using MySQL and Firebase for data management.',
+    technologies: ['PHP', 'Laravel', 'Vue.js', 'MySQL', 'Firebase', 'AWS', 'Docker', 'Node.js'],
+  },
+  {
+    id: 3,
+    company: 'IESDE',
+    companySite: 'https://iesde.com.br',
+    location: 'Curitiba, PR',
+    position: 'Full Stack Developer',
+    period: '06/2021 - 02/2022',
+    description: 'Developing and maintaining an E-learning platform for higher education institutions. Creating robust APIs in PHP (CodeIgniter) supporting hundreds of requests per minute. Data management with MySQL and optimization with Redis for caching. Maintaining payment system in Node.js with AWS Lambda.',
+    technologies: ['PHP', 'CodeIgniter', 'MySQL', 'Redis', 'Node.js', 'AWS Lambda', 'JavaScript', 'jQuery'],
+  },
+];
+
+// Educação - Português
+export const educationPT = [
   {
     id: 1,
     institution: 'PUC-PR',
@@ -104,11 +102,95 @@ export const education = [
   },
 ];
 
+// Educação - Inglês
+export const educationEN = [
+  {
+    id: 1,
+    institution: 'PUC-PR',
+    institutionSite: 'https://pucpr.br',
+    degree: 'Big Data: Data Science',
+    period: '06/2021 - 12/2023',
+    location: 'Curitiba, PR',
+    description: 'Machine Learning, Big Query, Clusters, Data Analysis',
+  },
+  {
+    id: 2,
+    institution: 'SESI-PR',
+    institutionSite: 'https://sesi.pr',
+    degree: 'Technician in Systems Analysis and Development',
+    period: '06/2019 - 12/2020',
+    location: 'Curitiba, PR',
+    description: 'Technology',
+  },
+];
+
+// Skills - Português
+export const skillsPT = {
+  frontend: [
+    {name: 'Vue.js', level: 90},
+    {name: 'JavaScript', level: 90},
+    {name: 'HTML/CSS', level: 95},
+    {name: 'jQuery', level: 85},
+  ],
+  backend: [
+    {name: 'PHP', level: 95},
+    {name: 'Laravel', level: 90},
+    {name: 'C# / .NET', level: 85},
+    {name: 'Java', level: 80},
+    {name: 'Node.js', level: 75},
+    {name: 'Python', level: 80},
+    {name: 'REST APIs', level: 90},
+  ],
+  database: [
+    {name: 'MySQL', level: 90},
+    {name: 'PostgreSQL', level: 85},
+    {name: 'PostGIS', level: 80},
+    {name: 'Firebase', level: 75},
+    {name: 'Redis', level: 80},
+  ],
+  tools: [
+    {name: 'Docker', level: 85},
+    {name: 'AWS', level: 85},
+    {name: 'CI/CD', level: 85},
+    {name: 'Git', level: 90},
+    {name: 'AWS Lambda', level: 75},
+  ],
+};
+
+// Skills - Inglês (nomes mantidos, só soft skills mudam)
+export const skillsEN = {
+  frontend: skillsPT.frontend,
+  backend: skillsPT.backend,
+  database: skillsPT.database,
+  tools: skillsPT.tools,
+  soft: [
+    'Effective Communication',
+    'Teamwork',
+    'Problem Solving',
+    'Continuous Learning',
+    'Clean Architecture',
+    'Scalability',
+    'Microservices',
+  ],
+};
+
+// Exportações padrão (Português)
+export const experience = experiencePT;
+export const education = educationPT;
+export const skills = skillsPT;
+
+// Idiomas
 export const languages = [
   {name: 'Português', level: 'Língua materna'},
   {name: 'Inglês', level: 'C1 - Avançado'},
 ];
 
+export const languagesEN = [
+  {name: 'Portuguese', level: 'Native'},
+  {name: 'English', level: 'C1 - Advanced'},
+];
+
+// Stats
 export const stats = [
   {value: '5+', label: 'Anos de Experiência'},
   {value: '15+', label: 'Projetos Entregues'},
@@ -116,7 +198,14 @@ export const stats = [
   {value: '100%', label: 'Dedicação'},
 ];
 
-// Empty export for compatibility (projects section hidden)
+export const statsEN = [
+  {value: '5+', label: 'Years of Experience'},
+  {value: '15+', label: 'Projects Delivered'},
+  {value: '10+', label: 'Technologies'},
+  {value: '100%', label: 'Dedication'},
+];
+
+// Projetos (escondido)
 export const projects: Array<{
   id: number;
   title: string;

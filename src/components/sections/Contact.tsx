@@ -4,11 +4,11 @@ import {useTranslations} from 'next-intl';
 import {motion} from 'framer-motion';
 import {Card, CardContent} from '@/components/ui/card';
 import {Mail, MapPin, MessageCircle, Send} from 'lucide-react';
-import {personalInfo} from '@/lib/data';
+import {useData} from '@/lib/useData';
 
 export function Contact() {
   const t = useTranslations('contact');
-  const ti = useTranslations('contact.info');
+  const {personalInfo} = useData();
 
   const containerVariants = {
     hidden: {opacity: 0},
@@ -77,7 +77,7 @@ export function Contact() {
                     {personalInfo.phone}
                   </p>
                   <div className="flex items-center justify-center gap-2 text-green-400 text-sm font-medium">
-                    <span>Iniciar conversa</span>
+                    <span>Start chat</span>
                     <Send className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </CardContent>
@@ -101,7 +101,7 @@ export function Contact() {
                     {personalInfo.email}
                   </p>
                   <div className="flex items-center justify-center gap-2 text-green-400 text-sm font-medium">
-                    <span>Enviar email</span>
+                    <span>Send email</span>
                     <Send className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </CardContent>

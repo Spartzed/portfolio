@@ -5,9 +5,11 @@ import {ArrowDown, Mail} from 'lucide-react';
 import {motion} from 'framer-motion';
 import {Link} from '@/i18n/routing';
 import {GithubIcon, LinkedinIcon} from '@/components/ui/icons';
+import {useData} from '@/lib/useData';
 
 export function Hero() {
   const t = useTranslations('hero');
+  const {personalInfo} = useData();
 
   const containerVariants = {
     hidden: {opacity: 0},
@@ -107,13 +109,13 @@ export function Hero() {
             variants={itemVariants}
             className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-4 tracking-tight"
           >
-            {t('name')}
+            {personalInfo.name}
           </motion.h1>
 
           {/* Title */}
           <motion.div variants={itemVariants} className="mb-6">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">
-              {t('title')}
+              {personalInfo.title}
             </h2>
           </motion.div>
 
@@ -128,7 +130,7 @@ export function Hero() {
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <a
-              href="#projects"
+              href="#skills"
               className="h-12 px-8 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium hover:from-green-600 hover:to-emerald-700 transition-all hover:scale-105 hover:shadow-lg hover:shadow-green-500/25 flex items-center gap-2"
             >
               {t('cta')}
@@ -145,7 +147,7 @@ export function Hero() {
           {/* Social Links */}
           <motion.div variants={itemVariants} className="flex items-center justify-center gap-4">
             <a
-              href="https://github.com/marcusviniciusr"
+              href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
               className="h-12 w-12 rounded-full border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/50 hover:text-green-400 hover:scale-110 transition-all flex items-center justify-center text-zinc-400"
@@ -154,7 +156,7 @@ export function Hero() {
               <GithubIcon className="h-5 w-5" />
             </a>
             <a
-              href="https://www.linkedin.com/in/marcus-rodrigues-dev/"
+              href={personalInfo.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="h-12 w-12 rounded-full border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/50 hover:text-green-400 hover:scale-110 transition-all flex items-center justify-center text-zinc-400"
@@ -163,7 +165,7 @@ export function Hero() {
               <LinkedinIcon className="h-5 w-5" />
             </a>
             <a
-              href="mailto:marcusr.dev@gmail.com"
+              href={`mailto:${personalInfo.email}`}
               className="h-12 w-12 rounded-full border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm hover:border-green-500/50 hover:text-green-400 hover:scale-110 transition-all flex items-center justify-center text-zinc-400"
               aria-label="Email"
             >

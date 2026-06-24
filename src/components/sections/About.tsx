@@ -2,14 +2,15 @@
 
 import {useTranslations} from 'next-intl';
 import {motion} from 'framer-motion';
-import {skills, stats, education, languages} from '@/lib/data';
 import {Badge} from '@/components/ui/badge';
 import {Card, CardContent} from '@/components/ui/card';
 import {GraduationCap, Languages} from 'lucide-react';
+import {useData} from '@/lib/useData';
 
 export function About() {
   const t = useTranslations('about');
   const ts = useTranslations('skills');
+  const {skills, stats, education, languages} = useData();
 
   const containerVariants = {
     hidden: {opacity: 0},
